@@ -1,0 +1,13 @@
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\bin\Debug\TestingLibrary.exe.config
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\bin\Debug\TestingLibrary.exe
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\bin\Debug\TestingLibrary.pdb
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.csproj.AssemblyReference.cache
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.csproj.SuggestedBindingRedirects.cache
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.Properties.Resources.resources
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.csproj.GenerateResource.cache
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.exe
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.pdb
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.LoginForm.resources
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.AddGame.resources
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.MainPage.resources
