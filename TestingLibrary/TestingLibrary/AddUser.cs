@@ -2,33 +2,45 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace TestingLibrary
 {
-    public partial class MainPage : Form
+    public partial class AddUser : Form
     {
-        SqlConnection cnn;
-        string connectionString;
-        public MainPage()
+        public string connectionString;
+        private SqlConnection cnn;
+        public AddUser()
         {
             InitializeComponent();
-            ListBox mylist = new ListBox();
-
             connectionString = @"Data Source=DESKTOP-CD7GTAS\SQLEXPRESS01;Initial Catalog=Demodb;User ID=Helper;Password=Helper";
             cnn = new SqlConnection(connectionString);
             cnn.Open();
             MessageBox.Show("Connection Open!");
+            cnn.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             string sql = null;
 
-            sql = "SELECT * FROM GameLibrary";
+            // Prepare a proper parameterized query 
+            sql = "Insert Into UserLibrary (gameName, gamePath) values(@name,@path)";
 
-            using (SqlConnection cnn = new SqlConnection(connectionString))
+            // Create the connection (and be sure to dispose it at the end)
+            using (cnn = new SqlConnection(connectionString))
+            {
                 try
                 {
                     // Open the connection to the database. 
@@ -39,18 +51,24 @@ namespace TestingLibrary
                     // Prepare the command to be executed on the db
                     using (SqlCommand cmd = new SqlCommand(sql, cnn))
                     {
+                        // Create and set the parameters values 
+                        cmd.Parameters.Add("@name", SqlDbType.NVarChar).Value = UsernameBox.Text;
+                        cmd.Parameters.Add("@path", SqlDbType.NVarChar).Value = PasswrdBox.Text;
+
                         // Let's ask the db to execute the query
                         int rowsAdded = cmd.ExecuteNonQuery();
 
                         if (rowsAdded > 0)
                         {
                             MessageBox.Show("Row inserted!!");
+                            this.Hide();
+                            var mainPage = new MainPage();
+                            mainPage.Show();
+
                         }
                         else
-                        {
                             // Well this should never really happen
                             MessageBox.Show("No row inserted");
-                        }
 
                     }
                 }
@@ -61,30 +79,7 @@ namespace TestingLibrary
                     MessageBox.Show("ERROR:" + ex.Message);
                 }
 
-            
-
-            cnn.Close();
-        }
-
-        private void NewGameBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form1 = new AddGame();
-            form1.Show();
-        }
-
-        
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form2 = new AddUser();
-            form2.Show();
+            }
         }
     }
 }

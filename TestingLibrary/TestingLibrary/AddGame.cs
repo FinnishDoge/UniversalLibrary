@@ -13,7 +13,7 @@ namespace TestingLibrary
 {
     public partial class AddGame : Form
     {
-        string connetionString;
+        string connectionString;
         SqlConnection cnn;
         public AddGame()
         {
@@ -23,8 +23,8 @@ namespace TestingLibrary
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            connetionString = @"Data Source=DESKTOP-CD7GTAS\SQLEXPRESS01;Initial Catalog=Demodb;User ID=Helper;Password=Helper";
-            cnn = new SqlConnection(connetionString);
+            connectionString = @"Data Source=DESKTOP-CD7GTAS\SQLEXPRESS01;Initial Catalog=Demodb;User ID=Helper;Password=Helper";
+            cnn = new SqlConnection(connectionString);
             cnn.Open();
             MessageBox.Show("Connection Open!");
             cnn.Close();
@@ -38,7 +38,7 @@ namespace TestingLibrary
             sql = "insert into GameLibrary (gameName, gamePath) values(@name,@path)";
 
             // Create the connection (and be sure to dispose it at the end)
-            using (SqlConnection cnn = new SqlConnection(connetionString))
+            using (SqlConnection cnn = new SqlConnection(connectionString))
             {
                 try
                 {

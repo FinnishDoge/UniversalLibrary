@@ -11,3 +11,4 @@ C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\Tes
 C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.LoginForm.resources
 C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.AddGame.resources
 C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.MainPage.resources
+C:\Users\Eemeli Saurila\source\repos\TestingLibrary\TestingLibrary\obj\Debug\TestingLibrary.AddUser.resources
